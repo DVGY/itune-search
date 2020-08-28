@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, Image } from 'antd';
 import { Col } from 'antd';
 
 import { Typography } from 'antd';
@@ -11,7 +10,6 @@ import {
   Image100x100,
 } from './music-card-style';
 
-const { Meta } = Card;
 const { Title } = Typography;
 
 // Make the card UI, Searchbar UI and whole layout at the end,loading UI

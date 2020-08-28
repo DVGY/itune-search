@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spin, Row, Title } from 'antd';
+import { Spin, Row} from 'antd';
 
 const WithSpinner = (WrappedComponent) => {
   const Spinner = ({ ...otherProps }) => {
@@ -12,7 +12,9 @@ const WithSpinner = (WrappedComponent) => {
         <Spin size="large" />
       </Row>
     ) : (
-      <div>Search something dude</div>
+      <div>
+        <h1>Search Something</h1>
+      </div>
     );
   };
   return Spinner;
