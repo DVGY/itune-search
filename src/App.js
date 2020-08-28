@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+
+import SearchBox from './components/SearchBox';
+import Musics from './components/Musics';
+
+import { Layout } from 'antd';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+const { Header, Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <Layout className="music-layout">
+        <Header
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <SearchBox />
+        </Header>
+        <Content
+          style={{
+            paddingTop: '8px',
+          }}
+        >
+          <Switch>
+            <Route path="/" component={Musics} />
+          </Switch>
+        </Content>
+      </Layout>
+    </Router>
   );
 }
 

@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.music-layout {
+  padding: 1rem 4rem;
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .music-layout {
+    padding: 0.5rem 0.5rem;
+    height: 100vh;
+  }
+}
